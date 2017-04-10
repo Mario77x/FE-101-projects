@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Arrays </title>
+</head>
+
+<body>
+
+	<h1> Arrays </h1>
+
+	<p id="objectDisplay"> Object </p>
+
+	<script type="text/javascript">
+
+		var string = "";
+		var arrayOne = ["Name", "LastName", "Age", "Height"];
+		var arrayTwo = ["Mario", "Savi", 39, 1.83];
+
+		function arrayToObject() {
+				var object = {[arrayOne[0]]:arrayTwo[0], [arrayOne[1]]:arrayTwo[1], [arrayOne[2]]:arrayTwo[2], [arrayOne[3]]:arrayTwo[3]}
+				
+				for (var i = 0; i < 4; i++) {
+					string = string + (object[arrayOne[i]] + " ");
+				}
+
+				document.getElementById("objectDisplay").innerHTML = string;
+			}
+
+
+	</script>
+	
+
+	<button type = "button" onclick = arrayToObject()> Click to show object </button>
+
+</body>
+
+</html>

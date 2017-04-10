@@ -1,0 +1,106 @@
+body {
+	width: 100%;
+	background-size: cover;
+	margin: 0px;
+	padding: 0px;
+}
+
+.container-fluid {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.slide-one {
+	height: 770px;
+	background-color: rgba(0, 78, 255, 0.2);
+}
+
+.slide-two {
+	height: 770px;
+	background-color: blue;
+}
+
+.slide-three {
+	height: 770px;
+	background-color: red;
+}
+
+.slide-four {
+	height: 770px;
+	background-color: black;
+}
+
+p {
+	padding-top: 150px;
+	text-align: center;
+	font-family: "calibri";
+	font-size: 50px;
+	font-weight: bold;
+	color: grey;
+}
+
+nav {
+	font-family: "calibri";
+	font-size: 20px;
+	background-color: rgba(83, 106, 117, 0.79);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid black;
+}
+
+nav ul {
+	padding-top: 10px;
+	color: black;
+	text-align: right;
+}
+
+nav li {
+	display: inline;
+	margin-top: 10px;
+	padding-right: 20px;
+}
+
+li a #home {
+	text-align: left;
+} 
+
+nav a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+nav a:hover {
+	color: white;
+	text-decoration: none;
+	border-color: cyan;
+}
+
+nav a:active {
+	color: white;
+	text-decoration: none;
+	border-color: cyan;
+}
+
+
+
+
+@media (max-width: 480px) {
+
+	nav {
+		font-size: 17px;
+	}
+
+	nav ul {
+		padding-top: 13.5px;
+	} 
+
+	nav li {
+		padding-right: 10px;
+	}
+
+}

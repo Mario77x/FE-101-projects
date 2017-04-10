@@ -1,0 +1,31 @@
+
+.box {
+	width: 50px;
+	height: 50px;
+	background-color: grey;
+	border: 2px solid cyan;
+}
+
+@keyframes some-keyframe {
+  0% {margin-left: 0px; margin-top: 0px;}
+  25% {margin-left: 50px; margin-top: 50px;}
+  50% {margin-left: 50px; margin-top: 150px;}
+  100% {margin-left: 200px; margin-top: 200px;}
+}
+
+.box {
+  /*The name of your defined animation (after @keyframes)*/
+  -webkit-animation-name: some-keyframe;
+  /*How long the animation will run*/
+  -webkit-animation-duration: 5s;
+  /*Which easing/timing function to use */
+  -webkit-animation-timing-function: linear;
+  /*How long to wait before starting the animation*/
+  -webkit-animation-delay: 2s;
+  /*how many times to run it (can be infinite)*/
+  -webkit-animation-iteration-count: 2;
+  /*should animation play in reverse on alternate runs */
+  -webkit-animation-direction: alternate;
+  /*should the animation start of running or paused */
+  -webkit-animation-play-state: running;
+}

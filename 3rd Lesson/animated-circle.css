@@ -1,0 +1,35 @@
+.container-fluid {
+	margin: 0px;
+	padding: 0px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+	background-color: grey;
+	border: 2px solid #98c1c7;
+}
+
+@keyframes anim-circ {
+  0% {margin-left: 0px; margin-top: 0px;}
+  50% {margin-left: 1498px; margin-top: 0px;}
+  100% {margin-left: 1498px; margin-top: 668px;}
+}
+
+.circle {
+  /*The name of your defined animation (after @keyframes)*/
+  -webkit-animation-name: anim-circ;
+  /*How long the animation will run*/
+  -webkit-animation-duration: 8s;
+  /*Which easing/timing function to use */
+  -webkit-animation-timing-function: easing;
+  /*How long to wait before starting the animation*/
+  -webkit-animation-delay: 0.5s;
+  /*how many times to run it (can be infinite)*/
+  -webkit-animation-iteration-count: 2;
+  /*should animation play in reverse on alternate runs */
+  -webkit-animation-direction: alternate;
+  /*should the animation start of running or paused */
+  -webkit-animation-play-state: running;
+}
