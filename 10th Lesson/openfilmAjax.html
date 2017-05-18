@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Film Search</title>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+      var filmName = prompt("Which film do you want to read abaout?");
+      $.getJSON("https://api.themoviedb.org/3/search/movie?",
+          {
+            query: filmName,
+            api_key: "b2713be22a0c06726651efdcb040ecaa",
+            language: "en-US",
+          },
+
+          function(response) {
+
+            $("#res").html(JSON.stringify(response.results[0].overview));
+
+
+            // var x = response.results;
+            // var size = Object.keys(x).length;
+
+            // console.log(size);
+
+            // for (i=0; i<size; i++) {
+            //   $("#res").html(JSON.stringify(response.results[i].overview));
+            // }
+          }
+      );
+
+    }); 
+
+  </script>
+
+</head>
+<body>
+  <div>Films: <span id="film-name"></span></div>
+  <div id="res"></div>
+</body>
+</html>

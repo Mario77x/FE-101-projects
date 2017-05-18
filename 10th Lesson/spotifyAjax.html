@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Artists</title>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var artistName = prompt("Which artist would you like to see on Spotify?");
+      $.ajax({
+        type: "GET",
+        url: 'https://api.spotify.com/v1/search',
+        data: {
+          q: artistName,
+          type: 'artist'
+        },
+        success: function (response) {
+          $("#songs").html("<a href='" + response.artists.items[0].external_urls.spotify + "'>" + artistName + "</a>");
+          console.log(response);
+        }
+      });
+    }); 
+  </script>
+
+</head>
+<body>
+  <div>Songs by: <span id="artist-name"></span></div>
+  <div id="songs"></div>
+</body>
+</html>
